@@ -1,0 +1,141 @@
+header {
+    background-image:url(imgsp/encabezadoooofinal.jpg);
+     background-size: cover; /* La imagen se ajusta para cubrir completamente el encabezado */
+     background-position: center; /* La imagen se centra en el encabezado */
+     height: 250px; /* Altura del encabezado */
+     text-align: center; /* Alinea el contenido al centro */
+     color:#FFF; /* Color del texto */
+     padding: 50px; /* Espacio interior del encabezado */
+     font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif
+     
+   }
+   *{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+nav{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   max-width:1550px;
+   margin:auto;
+   background-color:#333;
+   font-size:22px;
+   display: flex;
+   flex-direction: row;
+}
+.menu-horizontal{
+   list-style:none;
+   display: flex;
+   justify-content: space-around;
+}
+.menu-horizontal > li > a{
+   display:block;
+   padding:15px 20px;
+   color:white;
+   text-decoration: none;
+}
+.menu-horizontal > li:hover{
+   background-color: green;
+}
+.menu-vertical{
+   position:absolute;
+   display:none;
+   list-style:none;
+   width:200px;
+   background-color:rgba(0,0,0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+   display:block;
+}
+.menu-vertical li:hover{
+   background-color: rgb(230, 92, 92);
+}
+.menu-vertical li a{
+   display:block;
+   color:white;
+   padding:15px 15px 15px 20px;
+   text-decoration:none;
+   
+}
+
+
+
+
+    .encabezado{
+    border: 1px solid blue;
+    margin: 0 auto;
+    width:850px;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:17px;/* tamaño */
+    color:#000;
+    text-align: center;
+    font-weight:bold;
+    padding-top: 10px;
+    padding-bottom: 130px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: rgb(246, 246, 243);
+    }
+    p{
+        font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
+    img{
+        width:340px;
+        height:170px;
+    
+    }
+    body {
+        background-image: url('imgsp/Mision.jpg');
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+        background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+      }
+      
+      /* Aplica el efecto de desenfoque a la imagen de fondo */
+      body::after {
+       content:initial;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('imgsp/Mision.jpg');
+        background-size: cover;
+        z-index: -1;
+        filter: blur(1000px); /* Ajusta el valor según el nivel de desenfoque que desees */
+      }
+
+      footer{
+         background-color: green;
+         color: black;
+         
+      }
+      
+
+      @media (max-width: 768px) {
+         nav ul.menu-horizontal {
+             flex-direction: column;
+             align-items: center;
+         }
+
+         nav ul.menu-horizontal li {
+             margin: 10px 0;
+         }
+
+         .contenedor {
+             padding: 10px;
+         }
+     }
+
+     @media (max-width: 480px) {
+         nav ul.menu-horizontal li a {
+             padding: 10px;
+         }
+
+         nav ul.menu-horizontal li ul.menu-vertical li a {
+             padding: 8px;
+         }
+
+         .contenedor {
+             padding: 5px;
+         }
+     }
